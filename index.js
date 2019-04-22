@@ -12,17 +12,20 @@ const logDriversByHometown = function(driver, location){
   })
 }
 
-const driversByRevenue = function(driver, revenue){
-  return driver.sort(function(a,b){
+const driversByRevenue = function(drivers){
+  return drivers.slice().sort(function(a,b){
     return a.revenue-b.revenue;
   });
 }
 
+
+
 const driversByName = function(drivers){
-  return drivers.sort(function(a, b) {
+  return drivers.slice().sort(function(a, b) {
     return a.name.localeCompare(b.name);
   })
 }
+
 
 const totalRevenue = function(drivers){
   let totalPrice = 0;
